@@ -25,7 +25,7 @@ module.exports = function(app, cache, log) {
     }
     let id = metadata.id;
     let title = metadata.title;
-    let url = YOUTUBE_URL_PREFIX + id;
+    let url = YOUTUBE_URL_PREFIX + toString(id);
 
     log_function.info(log_header + "Search result is '" + title + "' @ " + url);
     res.status(200).json({
